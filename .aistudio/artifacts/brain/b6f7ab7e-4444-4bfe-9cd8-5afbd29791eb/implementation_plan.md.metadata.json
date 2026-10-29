@@ -1,0 +1,6 @@
+{
+  "summary":  "Plan to permanently embed profile and mascot photos into the codebase for GitHub and Vercel deployments, locking down public visitor edit/delete permissions while providing an export-to-code tool to bake current uploads into permanent assets.",
+  "updatedAt":  "2026-10-29T06:04:56.861569700Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
