@@ -80,6 +80,37 @@ git push
 ```
 Vercel will automatically detect the commit, trigger a fresh build, and update your live site with zero downtime.
 
+## 🖼️ How to Add Your Permanent Photos for Vercel
+
+Vite and Vercel serve all static files in the `/public` directory globally to every visitor:
+
+1. **Your Profile Photo:**
+   - Save your photo file as `public/daksh-patel.jpg` (or `public/daksh-patel.png`).
+   - If using `.jpg` or `.png`, update line 32 in `src/data/portfolioData.ts`:
+     ```ts
+     profilePhoto: "/daksh-patel.jpg",
+     ```
+2. **Alti Mascot Photo:**
+   - Save your Alti artwork into `public/alti-mascot.png` (or `.svg` / `.jpg`).
+   - If using `.png`, update line 35 in `src/data/portfolioData.ts`:
+     ```ts
+     altiPhoto: "/alti-mascot.png",
+     ```
+3. **Pix Mascot Photo:**
+   - Save your Pix artwork into `public/pix-mascot.png`.
+   - Update line 38 in `src/data/portfolioData.ts`:
+     ```ts
+     pixPhoto: "/pix-mascot.png",
+     ```
+
+4. **Commit & Push to GitHub:**
+   ```bash
+   git add public/ src/data/portfolioData.ts
+   git commit -m "feat: add permanent profile and mascot images"
+   git push origin main
+   ```
+   *Vercel will deploy in 20 seconds, and all visitors will see your photos immediately!*
+
 ---
 
 ## 🔒 Public Deployment vs Owner Mode

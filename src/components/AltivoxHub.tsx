@@ -260,6 +260,7 @@ export const AltivoxHub: React.FC = () => {
                         src={altiPhotoUrl}
                         alt="Alti Mascot"
                         className="w-full h-full object-cover"
+                        onError={() => setAltiPhotoUrl(null)}
                       />
                       {canEditMascots && (
                         <div className="absolute inset-0 bg-black/60 backdrop-blur-xs opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity text-cyan-300 text-[10px] font-mono">
@@ -356,6 +357,7 @@ export const AltivoxHub: React.FC = () => {
                         src={pixPhotoUrl}
                         alt="Pix Mascot"
                         className="w-full h-full object-cover"
+                        onError={() => setPixPhotoUrl(null)}
                       />
                       {canEditMascots && (
                         <div className="absolute inset-0 bg-black/60 backdrop-blur-xs opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity text-purple-300 text-[10px] font-mono">

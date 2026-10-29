@@ -27,14 +27,14 @@ export const PERMANENT_ASSETS = {
   // Public deployment mode lock: When true, public visitors on GitHub/Vercel CANNOT upload or cancel photos
   isPublicDeploymentLocked: true,
   
-  // Permanent default photo URL for Daksh (can be replaced with your real photo base64 or direct asset path)
-  profilePhoto: null as string | null,
+  // Permanent default photo URL for Daksh (placed in /public/daksh-patel.svg, or replace with /public/daksh-patel.jpg / .png)
+  profilePhoto: "/daksh-patel.svg" as string | null,
   
-  // Permanent default photo URL for Alti
-  altiPhoto: null as string | null,
+  // Permanent default photo URL for Alti (placed in /public/alti-mascot.svg or /public/alti-mascot.png)
+  altiPhoto: "/alti-mascot.svg" as string | null,
   
-  // Permanent default photo URL for Pix
-  pixPhoto: null as string | null,
+  // Permanent default photo URL for Pix (placed in /public/pix-mascot.svg or /public/pix-mascot.png)
+  pixPhoto: "/pix-mascot.svg" as string | null,
 };
 
 export const CANDIDATE_INFO = {

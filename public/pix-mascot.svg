@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <radialGradient id="pixGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#9333ea" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#140a24" stop-opacity="0.95"/>
+    </radialGradient>
+    <filter id="purpleNeon">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="300" height="300" rx="30" fill="#080c14"/>
+  <circle cx="150" cy="150" r="120" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Pix Head Chassis (Hexagonal / Diamond Cut) -->
+  <path d="M 150 70 L 225 110 L 225 190 L 150 230 L 75 190 L 75 110 Z" fill="url(#pixGlow)" stroke="#e9d5ff" stroke-width="3" filter="url(#purpleNeon)"/>
+  
+  <!-- Dual Sensory Ear Antennae -->
+  <path d="M 100 85 L 75 55" stroke="#e9d5ff" stroke-width="3"/>
+  <circle cx="70" cy="50" r="7" fill="#f472b6" filter="url(#purpleNeon)"/>
+  <path d="M 200 85 L 225 55" stroke="#e9d5ff" stroke-width="3"/>
+  <circle cx="230" cy="50" r="7" fill="#f472b6" filter="url(#purpleNeon)"/>
+
+  <!-- Creative Viewfinder Lens / Visor -->
+  <rect x="95" y="120" width="110" height="55" rx="14" fill="#0c0517" stroke="#a855f7" stroke-width="2"/>
+
+  <!-- Camera Shutter Star Eyes -->
+  <polygon points="125,135 129,145 139,145 131,151 134,161 125,155 116,161 119,151 111,145 121,145" fill="#f472b6" filter="url(#purpleNeon)"/>
+  <polygon points="175,135 179,145 189,145 181,151 184,161 175,155 166,161 169,151 161,145 171,145" fill="#f472b6" filter="url(#purpleNeon)"/>
+
+  <!-- Mascot Tag -->
+  <rect x="85" y="245" width="130" height="30" rx="8" fill="#1b092e" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="150" y="265" font-family="monospace" font-size="12" font-weight="bold" fill="#f0abfc" text-anchor="middle" letter-spacing="2">PIX · CREATIVE</text>
+</svg>

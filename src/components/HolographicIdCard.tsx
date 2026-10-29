@@ -236,6 +236,7 @@ export const HolographicIdCard: React.FC = () => {
                     src={photoUrl}
                     alt={CANDIDATE_INFO.fullName}
                     className="w-full h-full object-cover"
+                    onError={() => setPhotoUrl(null)}
                   />
                 ) : (
                   /* Cyberpunk Default Vector Avatar */
