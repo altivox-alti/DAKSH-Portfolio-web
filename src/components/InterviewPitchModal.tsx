@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Sparkles, Terminal, Shield, Globe, Award, CheckCircle2 } from 'lucide-react';
+import { X, Sparkles, Terminal, Shield, Globe, Award, CheckCircle2, Linkedin, Github } from 'lucide-react';
 import { CANDIDATE_INFO, INTERVIEW_PITCH, OFFICIAL_LINKS } from '../data/portfolioData';
 
 interface InterviewPitchModalProps {
@@ -161,10 +161,28 @@ export const InterviewPitchModal: React.FC<InterviewPitchModalProps> = ({ isOpen
               <span>Test Live App</span>
             </a>
             <a
+              href={OFFICIAL_LINKS.github.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-200 hover:text-white text-xs font-mono transition-colors inline-flex items-center gap-1.5"
+            >
+              <Github className="w-3.5 h-3.5 text-cyan-400" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href={OFFICIAL_LINKS.linkedin.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-lg bg-[#0077b5]/20 hover:bg-[#0077b5]/30 text-sky-300 border border-[#0077b5]/40 text-xs font-mono transition-colors inline-flex items-center gap-1.5"
+            >
+              <Linkedin className="w-3.5 h-3.5 text-sky-400" />
+              <span>LinkedIn</span>
+            </a>
+            <a
               href={OFFICIAL_LINKS.youtube.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-medium transition-colors"
+              className="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 hover:border-red-400 text-slate-300 hover:text-white text-xs font-medium transition-colors"
             >
               YouTube
             </a>

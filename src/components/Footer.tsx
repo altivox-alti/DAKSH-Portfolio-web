@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Copy, Check, Globe, Youtube, Instagram, ExternalLink, Sparkles, Lock, Unlock, Code, ShieldCheck } from 'lucide-react';
+import { Copy, Check, Globe, Youtube, Instagram, ExternalLink, Sparkles, Lock, Unlock, Code, ShieldCheck, Linkedin, Github } from 'lucide-react';
 import { CANDIDATE_INFO, OFFICIAL_LINKS } from '../data/portfolioData';
 import { cyberAudio } from '../utils/cyberSoundEffects';
 import { useOwner } from '../context/OwnerContext';
@@ -22,10 +22,12 @@ Target: GDG on Campus SSASIT 2026 Core Recruitment
 Domains: Web Developer | AI/ML | Cybersecurity
 College: Shri Swami Atmanand Saraswati Institute of Technology (SSASIT), Surat
 
-Official Links:
-1. Live Web Platform: ${OFFICIAL_LINKS.webPlatform.url}
-2. YouTube Channel: ${OFFICIAL_LINKS.youtube.url} (@altivox_ai)
-3. Instagram Account: ${OFFICIAL_LINKS.instagram.url} (@altivox_ai)`;
+Official Verified Links:
+1. LinkedIn Profile: ${OFFICIAL_LINKS.linkedin.url}
+2. GitHub Account: ${OFFICIAL_LINKS.github.url}
+3. Live Web Platform: ${OFFICIAL_LINKS.webPlatform.url}
+4. YouTube Channel: ${OFFICIAL_LINKS.youtube.url} (@altivox_ai)
+5. Instagram Account: ${OFFICIAL_LINKS.instagram.url} (@altivox_ai)`;
 
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
@@ -193,9 +195,42 @@ Official Links:
           {/* Col 3: Official Social Channels */}
           <div className="md:col-span-4 space-y-2">
             <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-2 font-bold">
-              Official Live Links
+              Official Live Links &amp; Profiles
             </span>
             <div className="space-y-2">
+              {/* LinkedIn */}
+              <a
+                href={OFFICIAL_LINKS.linkedin.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => cyberAudio.playHover()}
+                onClick={() => cyberAudio.playClick()}
+                className="p-2.5 rounded-xl bg-slate-900/80 border border-blue-500/40 hover:border-blue-400 text-xs font-mono flex items-center justify-between group transition-colors shadow-xs"
+              >
+                <div className="flex items-center gap-2">
+                  <Linkedin className="w-3.5 h-3.5 text-blue-400" />
+                  <span className="text-slate-200 group-hover:text-blue-300">LinkedIn Profile (@daksh-patel)</span>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-blue-400/60 group-hover:text-blue-300" />
+              </a>
+
+              {/* GitHub */}
+              <a
+                href={OFFICIAL_LINKS.github.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => cyberAudio.playHover()}
+                onClick={() => cyberAudio.playClick()}
+                className="p-2.5 rounded-xl bg-slate-900/80 border border-slate-700 hover:border-slate-400 text-xs font-mono flex items-center justify-between group transition-colors shadow-xs"
+              >
+                <div className="flex items-center gap-2">
+                  <Github className="w-3.5 h-3.5 text-slate-300" />
+                  <span className="text-slate-200 group-hover:text-white">GitHub Repos (@altivox-alti)</span>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-white" />
+              </a>
+
+              {/* Live Web App */}
               <a
                 href={OFFICIAL_LINKS.webPlatform.url}
                 target="_blank"
@@ -211,6 +246,7 @@ Official Links:
                 <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-cyan-400" />
               </a>
 
+              {/* YouTube */}
               <a
                 href={OFFICIAL_LINKS.youtube.url}
                 target="_blank"
@@ -226,6 +262,7 @@ Official Links:
                 <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-rose-400" />
               </a>
 
+              {/* Instagram */}
               <a
                 href={OFFICIAL_LINKS.instagram.url}
                 target="_blank"

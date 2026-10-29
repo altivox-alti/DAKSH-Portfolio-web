@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { ExternalLink, Camera, ArrowRight, Shield, Sparkles, Code, CheckCircle, Award, Terminal, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, Camera, ArrowRight, Shield, Sparkles, Code, CheckCircle, Award, Terminal, CheckCircle2, Linkedin, Github } from 'lucide-react';
 import { CANDIDATE_INFO, OFFICIAL_LINKS } from '../data/portfolioData';
 import { HolographicIdCard } from './HolographicIdCard';
 import { cyberAudio } from '../utils/cyberSoundEffects';
@@ -87,6 +87,65 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenPitch }) => {
                   Cybersecurity
                 </span>
               </div>
+            </div>
+
+            {/* Highlighted Developer Profiles: LinkedIn & GitHub */}
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+              {/* LinkedIn Highlight Card */}
+              <a
+                href={OFFICIAL_LINKS.linkedin.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => cyberAudio.playHover()}
+                onClick={() => cyberAudio.playClick()}
+                className="p-3 rounded-xl bg-gradient-to-r from-blue-950/50 via-slate-900 to-[#090d16] border border-blue-500/40 hover:border-blue-400 text-left flex items-center justify-between group transition-all shadow-[0_0_20px_rgba(37,99,235,0.18)] hover:scale-[1.01]"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform shadow-sm">
+                    <Linkedin className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-blue-300 font-bold uppercase tracking-wider block">
+                      LinkedIn Profile
+                    </span>
+                    <span className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors">
+                      Daksh Patel
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 text-[11px] font-mono text-blue-400 font-semibold">
+                  <span>Connect</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              {/* GitHub Highlight Card */}
+              <a
+                href={OFFICIAL_LINKS.github.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => cyberAudio.playHover()}
+                onClick={() => cyberAudio.playClick()}
+                className="p-3 rounded-xl bg-gradient-to-r from-slate-900/80 via-slate-950 to-[#090d16] border border-slate-700 hover:border-cyan-400 text-left flex items-center justify-between group transition-all shadow-[0_0_20px_rgba(6,182,212,0.18)] hover:scale-[1.01]"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-slate-800 border border-slate-600 flex items-center justify-center text-slate-200 group-hover:scale-105 transition-transform shadow-sm">
+                    <Github className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono text-slate-400 font-bold uppercase tracking-wider block">
+                      GitHub Repos
+                    </span>
+                    <span className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">
+                      @altivox-alti
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 text-[11px] font-mono text-cyan-400 font-semibold">
+                  <span>Explore</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
             </div>
 
             {/* CTAs Group */}

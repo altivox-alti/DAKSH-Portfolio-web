@@ -56,6 +56,20 @@ export const CANDIDATE_INFO = {
 };
 
 export const OFFICIAL_LINKS = {
+  linkedin: {
+    label: "LinkedIn Profile",
+    url: "https://www.linkedin.com/in/daksh-patel-a05ab3273?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    handle: "daksh-patel-a05ab3273",
+    role: "Professional Network",
+    type: "LinkedIn"
+  },
+  github: {
+    label: "GitHub Account",
+    url: "https://github.com/altivox-alti",
+    handle: "altivox-alti",
+    role: "Open Source & Code",
+    type: "GitHub"
+  },
   webPlatform: {
     label: "Live Web Platform",
     url: "https://altivox-ai-ten.vercel.app",

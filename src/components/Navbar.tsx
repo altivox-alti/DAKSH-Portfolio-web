@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Globe, Youtube, Instagram, Sparkles, Volume2, VolumeX } from 'lucide-react';
+import { Globe, Youtube, Instagram, Sparkles, Volume2, VolumeX, Linkedin, Github } from 'lucide-react';
 import { OFFICIAL_LINKS } from '../data/portfolioData';
 import { cyberAudio } from '../utils/cyberSoundEffects';
 
@@ -129,6 +129,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPitch }) => {
 
           {/* Direct Social Buttons (Target blank) */}
           <div className="flex items-center gap-1 border-l border-slate-800 pl-2">
+            {/* LinkedIn Profile */}
+            <a
+              href={OFFICIAL_LINKS.linkedin.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn Profile (@daksh-patel)"
+              onMouseEnter={() => cyberAudio.playHover()}
+              onClick={() => cyberAudio.playClick()}
+              className="p-1.5 rounded-lg text-slate-300 hover:text-blue-400 hover:bg-blue-950/60 transition-colors"
+            >
+              <Linkedin className="w-4 h-4 text-blue-400" />
+            </a>
+
+            {/* GitHub Account */}
+            <a
+              href={OFFICIAL_LINKS.github.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub Account (@altivox-alti)"
+              onMouseEnter={() => cyberAudio.playHover()}
+              onClick={() => cyberAudio.playClick()}
+              className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+            >
+              <Github className="w-4 h-4 text-slate-200" />
+            </a>
+
+            {/* Live Web Platform */}
             <a
               href={OFFICIAL_LINKS.webPlatform.url}
               target="_blank"
@@ -141,6 +168,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPitch }) => {
               <Globe className="w-4 h-4" />
             </a>
 
+            {/* YouTube */}
             <a
               href={OFFICIAL_LINKS.youtube.url}
               target="_blank"
@@ -153,6 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPitch }) => {
               <Youtube className="w-4 h-4" />
             </a>
 
+            {/* Instagram */}
             <a
               href={OFFICIAL_LINKS.instagram.url}
               target="_blank"

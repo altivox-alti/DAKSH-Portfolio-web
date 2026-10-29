@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Camera, ExternalLink, Sparkles, Trash2, ShieldCheck, Cpu, Globe, Radio, Lock, Unlock } from 'lucide-react';
+import { Camera, ExternalLink, Sparkles, Trash2, ShieldCheck, Cpu, Globe, Radio, Lock, Unlock, Linkedin, Github } from 'lucide-react';
 import { CANDIDATE_INFO, OFFICIAL_LINKS, PERMANENT_ASSETS } from '../data/portfolioData';
 import { cyberAudio } from '../utils/cyberSoundEffects';
 import { useOwner } from '../context/OwnerContext';
@@ -364,6 +364,32 @@ export const HolographicIdCard: React.FC = () => {
 
             {/* Quick Live Link Buttons */}
             <div className="flex items-center gap-1.5">
+              <a
+                href={OFFICIAL_LINKS.linkedin.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn Profile (@daksh-patel)"
+                className="p-1.5 rounded-lg bg-blue-950/70 border border-blue-500/40 text-blue-400 hover:bg-blue-900 transition-colors"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  cyberAudio.playClick();
+                }}
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href={OFFICIAL_LINKS.github.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub Account (@altivox-alti)"
+                className="p-1.5 rounded-lg bg-slate-800/80 border border-slate-600/40 text-slate-200 hover:bg-slate-700 transition-colors"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  cyberAudio.playClick();
+                }}
+              >
+                <Github className="w-3.5 h-3.5" />
+              </a>
               <a
                 href={OFFICIAL_LINKS.webPlatform.url}
                 target="_blank"
